@@ -1,1 +1,1 @@
-#Currency-converter
+Homework for Object-oriented technologies. :)
