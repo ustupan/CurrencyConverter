@@ -3,9 +3,9 @@ import com.homework.model.*;
 
 
 public class Calculator {
-    private CurrRepository currencyRepository;
+    private Currencies currencyRepository;
 
-    public Calculator(CurrRepository currencyRepository) {
+    public Calculator(Currencies currencyRepository) {
         this.currencyRepository = currencyRepository;
     }
 

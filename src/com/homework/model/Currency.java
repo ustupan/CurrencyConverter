@@ -1,10 +1,10 @@
 package com.homework.model;
 
 public class Currency {
-    private String code;
     private String currencyName;
-    private float rate;
     private float multiplicand;
+    private String code;
+    private float rate;
 
     public Currency(String code, String currencyName, float rate, float multiplicand) {
         this.code = code;
@@ -35,5 +35,11 @@ public class Currency {
 
     public void setRate(float rate) {
         this.rate = rate;
+    }
+
+    @Override
+    public String toString() {
+        return "Subscriber [code=" + code + ", currencyName=" + currencyName
+                + ", rate=" + rate + ", multiplicand=" + multiplicand + "]";
     }
 }
