@@ -1,5 +1,5 @@
 package com.homework.controller;
 
 public interface ControllerInterface {
-    void check(String x);
+    void check(String x) throws Exception;
 }

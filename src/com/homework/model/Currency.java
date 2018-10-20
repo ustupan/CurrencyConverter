@@ -2,11 +2,11 @@ package com.homework.model;
 
 public class Currency {
     private String currencyName;
-    private float multiplicand;
+    private double multiplicand;
     private String code;
-    private float rate;
+    private double rate;
 
-    public Currency(String code, String currencyName, float rate, float multiplicand) {
+    public Currency(String code, String currencyName, double rate, double multiplicand) {
         this.code = code;
         this.currencyName = currencyName;
         this.rate = rate;
@@ -21,11 +21,11 @@ public class Currency {
         return code;
     }
 
-    public float getMultiplicand() {
+    public double getMultiplicand() {
         return multiplicand;
     }
 
-    public float getRate() {
+    public double getRate() {
         return rate;
     }
 
@@ -37,9 +37,4 @@ public class Currency {
         this.rate = rate;
     }
 
-    @Override
-    public String toString() {
-        return "Subscriber [code=" + code + ", currencyName=" + currencyName
-                + ", rate=" + rate + ", multiplicand=" + multiplicand + "]";
-    }
 }

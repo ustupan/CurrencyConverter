@@ -1,4 +1,4 @@
-package com.homework.model;
+package com.homework.model.webConnection;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -6,11 +6,14 @@ import java.net.URL;
 
 
 public class WebClient {
-    private StringBuffer response = new StringBuffer();
+    private static StringBuffer response = new StringBuffer();
+    private String urlString;
 
-    public WebClient() { }
+    public WebClient(String urlString) {
+        this.urlString = urlString;
+    }
 
-    public StringBuffer requireData(String urlString) {
+    public StringBuffer requireData() {
         try {
             URL url = new URL(urlString);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -22,7 +25,7 @@ public class WebClient {
             }
             in.close();
         } catch (Exception e) {
-            e.printStackTrace(System.out);
+            System.out.println("Unable to prase from website");
         }
         return response;
     }
